@@ -1,15 +1,16 @@
 export {};
 
-let numbers: number[] = [1, 2, 3];
+let array1: number[] = [1, 2, 4, 8, 16];
+let array2: Array<number> = [1, 3, 5, 7, 9]; // 非推奨
 
-let numbers2: Array<number> = [1, 2, 3];
-let strings2: Array<string> = ['Tokyo', 'Osaka', 'Kyoto'];
+console.log(array1);
+console.log(array2);
 
-let strings: string[] = ['TypeScript', 'JavaScript', 'CoffeeScript'];
+let multiArray: number [][] = [
+  [10, 20, 40],
+  [40, 10000, 60]
+]
 
-let nijigenHairetsu: number[][] = [
-  [50, 100],
-  [150, 300]
-];
+let array3:(number|boolean|string|(number|string)[])[] = [1, false, 'japan', [1, 2, 3, 'india']];
 
-let hairetsu: (string | number | boolean)[] = [1, false, 'Japan'];
+console.log(array3);
