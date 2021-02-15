@@ -11,6 +11,7 @@ let multiArray: number [][] = [
   [40, 10000, 60]
 ]
 
+// ユニオン型(順序は制約せず、型指定を行う)
 let array3:(number|boolean|string|(number|string)[])[] = [1, false, 'japan', [1, 2, 3, 'india']];
 
 console.log(array3);
