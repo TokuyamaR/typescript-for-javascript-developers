@@ -1,7 +1,7 @@
 export {};
 
-function returnNothing(): void {
-  console.log("I dont't return anything!");
+function returnNothing(): void{
+  console.log("I don't return anything!");
 }
 
-console.log(returnNothing());
+console.log(returnNothing)
