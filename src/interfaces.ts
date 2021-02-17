@@ -1,16 +1,18 @@
 export {};
 
-type ObjectType = {
-  name: string;
-  age: number;
-};
-
-interface ObjectInterface {
-  name: string;
-  age: number;
+type ObjectType1 = {
+  name: string,
+  age: number,
+  address: string,
 }
 
-let object: ObjectInterface = {
-  name: 'Ham-san',
-  age: 43
-};
+interface ObjectInterface { // 「=」は不要
+  name: string,
+  age: number,
+  address: string
+}
+const object: ObjectInterface = {
+  name: 'toku',
+  age: 29,
+  address: 'Tokyo'
+}

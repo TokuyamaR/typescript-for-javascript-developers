@@ -1,5 +1,5 @@
 export {};
 
-let value: number | string = 1;
+let value: string | number = 1; // 文字列、数値どちらも代入可能
 value = 'foo';
 value = 100;

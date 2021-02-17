@@ -1,12 +1,14 @@
 export {};
 
+// enum：列挙に用いる
+
 enum Months {
   January = 1,
   February,
   March,
   April,
   May,
-  Jun,
+  June,
   July,
   August,
   September,
@@ -15,33 +17,26 @@ enum Months {
   December
 }
 
-console.log(Months.January);
-console.log(Months.February);
-console.log(Months.December);
+// 自動で連番を付与してくれる(連番の開始番号も1箇所指定すれば済む！)
+// JSだとkey: valueで記載が必要なため、記述量も少なく済む
+console.log(Months.February); // 2
+console.log(Months.October); // 10
+console.log(Months.May); // 5
 
-// const MonthsJs = {
-//   January: 0,
-//   February: 1
-// };
-//
-// console.log(MonthsJs.January);
-// console.log(MonthsJs.February);
-
-enum COLORS {
+enum Colors {
   RED = '#FF0000',
   WHITE = '#FFFFFF',
-  GREEN = '#008000',
+  GREEN = '#FF0000',
   BLUE = '#0000FF',
-  //  YELLOW = '#FFFF00',
-  BLACK = '#000000'
+  BLACK = '#000000',
 }
 
-let green = COLORS.GREEN;
-console.log({ green });
+let green = Colors.GREEN;
+console.log(green);
 
-enum COLORS {
-  YELLOW = '#FFFF00',
+// enumは途中追加も可能
+enum Colors {
   GRAY = '#808080'
 }
 
-COLORS.YELLOW;
+console.log(Colors.GRAY);
