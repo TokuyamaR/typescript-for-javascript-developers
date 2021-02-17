@@ -1,23 +1,28 @@
 export {};
 
-type Mojiretsu = string;
+type Mojiretsu = string; // typeで宣言するalliaは大文字
 
-const fooString: string = 'Hello';
-const fooMojiretsu: Mojiretsu = 'Hello';
+const fooString: string = 'string';
+const fooMojirestu: Mojiretsu = 'Mojiretsu';
 
-const example1 = {
-  name: 'Ham',
-  age: 43
-};
+// 通常の設定(個別設定。流用しづらい)
+type profileType1 = {
+  name: string,
+  age: number,
+  address: string,
+}
 
-type Profile = {
-  name: string;
-  age: number;
-};
+const profile1:profileType1 = {
+  name: 'toku',
+  age: 29,
+  address: 'Tokyo'
+}
 
-const example2: Profile = {
-  name: 'Ham',
-  age: 43
-};
+// 再利用しやすいtype設定(すでにある構造から型推論を行い暗黙的にアノテーションを実施。)
+type profileType2 = typeof profile1;
 
-type Profile2 = typeof example1;
+const profile2:profileType2 = {
+  name: 'toku',
+  age: 29,
+  address: 'Tokyo'
+}
