@@ -1,7 +1,6 @@
 export {};
-
-class Person {
-  public name: string;
+class Person{
+  name: string;
   // private age: number;
   protected age: number;
   protected nationality: string;
@@ -12,8 +11,8 @@ class Person {
     this.nationality = nationality;
   }
 
-  profile(): string {
-    return `name: ${this.name}, age: ${this.age}`;
+  profile(): string{
+    return `name: ${this.name}, age: ${this.age}, nationality: ${this.nationality}`;
   }
 }
 
@@ -22,13 +21,11 @@ class Android extends Person {
     super(name, age, nationality);
   }
 
-  profile(): string {
+  profile(): string{
     return `name: ${this.name}, age: ${this.age}, nationality: ${this.nationality}`;
   }
 }
 
-let taro = new Person('Taro', 30, 'Japan');
+let taro = new Android('Raido',29, 'Japan');
 console.log(taro.profile());
-console.log(taro.name);
 // console.log(taro.age);
-// let hanako = new Person();
