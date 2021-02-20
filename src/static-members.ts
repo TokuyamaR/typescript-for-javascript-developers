@@ -2,16 +2,13 @@ export {};
 
 class Me {
   static isProgrammer: boolean = true;
-  static firstName: string = 'Atsushi';
-  static lastName: string = 'Ishida';
+  static firstName: string = 'Raido';
+  static lastName: string = 'Toku';
 
-  static work() {
-    //     "Hey, guys! This is Atsushi! Are you interested in TypeScript? Let's dive into TypeScript!";
-    return `Hey, guys! This is ${this.firstName}! Are you interested in TypeScript? Let's dive into TypeScript!`;
+  static work(){
+    return `My name is ${this.firstName}`;
   }
 }
 
 // let me = new Me();
-// console.log(me.isProgrammer);
-console.log(Me.isProgrammer);
-console.log(Me.work());
+console.log(Me.work()); // functionもinstanceを生成せずに呼び出せる
