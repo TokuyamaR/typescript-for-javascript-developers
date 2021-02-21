@@ -1,16 +1,19 @@
 export {};
 
+// How to write index signature(objectのindexに対してアノテーションを署名する)
+// { [index: typeForIndex]: typeForValue }
+// interfaceを利用することで型アノテーション部分を簡略化できる
+
 interface Profile {
-  name: string;
-  underTwenty: boolean;
-  [index: string]: string | number | boolean;
+  name: string,
+  isJapanese: boolean,
+  [index: string]: string | number | boolean // 必須プロパティ(name, isJapanese)を含めてvalueの型をアノテーションする必要がある
 }
 
-let profile: Profile = { name: 'Ham', underTwenty: false };
+let profile: Profile = {
+  name: 'Raido',
+  isJapanese: false,
+}
 
-// How to write index signatures
-// { [ index: typeForIndex ]: typeForValue }
-
-profile.name = 'Ham';
-profile.age = 43;
-profile.nationality = 'Japan';
+profile.age = 28;
+profile.isJapanese = true;
