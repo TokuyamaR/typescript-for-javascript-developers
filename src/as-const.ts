@@ -1,16 +1,20 @@
 export {};
 
-let name = 'Atsushi';
+let name = 'Raido';
 
 name = 'Ham';
 
 let nickname = 'Ham' as const;
-nickname = 'Ham';
+// nickname = 'Hamtaro'; // nicknameはHam型となるため、Ham以外が代入できない(実質constの役割となる)
+
 
 let profile = {
-  name: 'Atsushi',
-  height: 178
-} as const;
+  name: 'Raido',
+  height: 171,
+  age: 28
+} as const // objectにas constを記載すると全てのプロパティがreadonlyとなる(ネストしていても全て適用される！)
 
-// profile.name = 'Ham';
+// profile.name = 'Raaaaido'; // as constで全てprofileのプロパティがreadonlyのため上書きできない
+// profile.age = 25;
 // profile.height = 180;
+
