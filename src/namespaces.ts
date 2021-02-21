@@ -1,33 +1,31 @@
 export {};
 
 namespace Japanese {
+
   export namespace Tokyo {
-    export class Person {
-      constructor(public name: string) {}
+    export class Person { // exportを記載することで、空間外からアクセスできる
+      constructor(public name: string){}
     }
   }
+
   export namespace Osaka {
-    export class Person {
-      constructor(public name: string) {}
+    export class Person { // exportを記載することで、空間外からアクセスできる
+      constructor(public name: string){}
     }
   }
 }
 
 namespace English {
   export class Person {
-    constructor(
-      public firstName: string,
-      public middleName: string,
-      public lastName: string
-    ) {}
+    constructor(public firstName: string, public middleName: string, public lastName: string){}
   }
 }
 
-const me = new Japanese.Tokyo.Person('はむさん');
-console.log(me.name);
+const me1 = new Japanese.Tokyo.Person('Raido');
+console.log(me1);
 
-const meOsaka = new Japanese.Osaka.Person('はむやん');
-console.log(meOsaka.name);
+const me2 = new Japanese.Osaka.Person('Raidon');
+console.log(me2);
 
 const michael = new English.Person('Michael', 'Joseph', 'Jackson');
 console.log(michael);

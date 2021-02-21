@@ -1,6 +1,6 @@
 export {};
 
-class Person {
+class Person{
   name: string;
   age: number;
 
@@ -9,10 +9,11 @@ class Person {
     this.age = age;
   }
 
-  profile(): string {
+  profile(): string{
     return `name: ${this.name}, age: ${this.age}`;
   }
 }
-let taro = new Person('Taro', 30);
+
+let taro = new Person('Raido',29);
+console.log(taro);
 console.log(taro.profile());
-// let hanako = new Person();
