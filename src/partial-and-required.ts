@@ -1,10 +1,25 @@
 export {};
 
 type Profile = {
-  name: string;
-  age?: number;
-  zipCode: number;
-};
+  name: string,
+  age: number,
+  sex: string
+  zipCode: number,
+  address: string,
+  phoneNumber: number,
+  isJapanese: boolean
+}
 
-type PartialType = Partial<Profile>;
-type RequiredType = Required<Profile>;
+type Profile2 = {
+  name: string,
+  age: number,
+  sex?: string
+  zipCode?: number,
+  address?: string,
+  phoneNumber: number,
+  isJapanese?: boolean
+}
+
+// Profileのプロパティを全てoptionalに
+type PartialProfile = Partial<Profile>;
+type RequiredProfile = Required<Profile2>;
