@@ -1,14 +1,15 @@
 export {};
 
+
 type Profile = {
-  name: string;
-  age: number;
-};
+  name: string,
+  age: number
+}
 
 const me: Profile = {
-  name: 'Ham',
-  age: 43,
-};
+  name: 'Raido',
+  age: 29
+}
 
 me.age++;
 
@@ -17,11 +18,16 @@ console.log(me);
 type PersonalDataType = Readonly<Profile>;
 
 const friend: PersonalDataType = {
-  name: 'Shigeru',
-  age: 40,
-};
+  name: 'Takeshi',
+  age: 25
+}
 
-// friend.age++;
+// friend.age++; // error ageはreadonlyなため
 
-type YomitoriSenyo<T> = { readonly [P in keyof T]: T[P] };
+console.log(friend);
+
+// readonlyの仕組み
+type YomitoriSenyo<T> = {
+  readonly [P in keyof T]: T[P];
+}
 type YomitoriSenyoProfile = YomitoriSenyo<Profile>;

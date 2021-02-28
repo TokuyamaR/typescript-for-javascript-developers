@@ -1,12 +1,19 @@
 export {};
 
 type Profile = {
-  name: string;
-  age: number;
-};
+  name: string,
+  age: number,
+  sex: string
+  zipCode: number,
+  address: string,
+  phoneNumber: number,
+  isJapanese: boolean
+}
 
 type PartialProfile = Partial<Profile>;
-type PropertyTypes = keyof Profile;
 
-type Optional<T> = { [P in keyof T]?: T[P] | null };
-type OptoinalProfile = Optional<Profile>;
+type Optional<T> = {[P in keyof T]?: T[P];}; // Partialの定義元をコピー
+// P in keyof TはオブジェクトTのプロパティ名を一個ずつ取り出している
+// Partilaはmapped types
+
+type OptionalProfile = Optional<Profile>;
